@@ -63,8 +63,9 @@ namespace Vista_PrototipoMenu
             this.lbl_costoTotal = new System.Windows.Forms.Label();
             this.lbl_precioTotal = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_remover = new System.Windows.Forms.Button();
             this.dgv_traslaProd = new System.Windows.Forms.DataGridView();
+            this.btn_remover = new System.Windows.Forms.Button();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -82,7 +83,8 @@ namespace Vista_PrototipoMenu
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(557, 230);
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(557, 281);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -96,15 +98,16 @@ namespace Vista_PrototipoMenu
             this.txt_precioUnit.Location = new System.Drawing.Point(188, 112);
             this.txt_precioUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_precioUnit.Name = "txt_precioUnit";
-            this.txt_precioUnit.Size = new System.Drawing.Size(269, 22);
+            this.txt_precioUnit.Size = new System.Drawing.Size(269, 23);
             this.txt_precioUnit.TabIndex = 7;
+            this.txt_precioUnit.Tag = "Prod_PrecioUnitario";
             // 
             // txt_precioTotal
             // 
             this.txt_precioTotal.Location = new System.Drawing.Point(188, 84);
             this.txt_precioTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_precioTotal.Name = "txt_precioTotal";
-            this.txt_precioTotal.Size = new System.Drawing.Size(269, 22);
+            this.txt_precioTotal.Size = new System.Drawing.Size(269, 23);
             this.txt_precioTotal.TabIndex = 6;
             // 
             // txt_costoTotal
@@ -112,7 +115,7 @@ namespace Vista_PrototipoMenu
             this.txt_costoTotal.Location = new System.Drawing.Point(188, 57);
             this.txt_costoTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_costoTotal.Name = "txt_costoTotal";
-            this.txt_costoTotal.Size = new System.Drawing.Size(269, 22);
+            this.txt_costoTotal.Size = new System.Drawing.Size(269, 23);
             this.txt_costoTotal.TabIndex = 5;
             // 
             // txt_cantidad
@@ -120,7 +123,7 @@ namespace Vista_PrototipoMenu
             this.txt_cantidad.Location = new System.Drawing.Point(188, 28);
             this.txt_cantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(269, 22);
+            this.txt_cantidad.Size = new System.Drawing.Size(269, 23);
             this.txt_cantidad.TabIndex = 4;
             // 
             // label9
@@ -128,7 +131,7 @@ namespace Vista_PrototipoMenu
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(29, 117);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 17);
+            this.label9.Size = new System.Drawing.Size(111, 19);
             this.label9.TabIndex = 3;
             this.label9.Text = "Precio Unitario:";
             // 
@@ -137,7 +140,7 @@ namespace Vista_PrototipoMenu
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(29, 89);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 17);
+            this.label10.Size = new System.Drawing.Size(87, 19);
             this.label10.TabIndex = 2;
             this.label10.Text = "Precio Total";
             // 
@@ -146,7 +149,7 @@ namespace Vista_PrototipoMenu
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(29, 62);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 17);
+            this.label11.Size = new System.Drawing.Size(84, 19);
             this.label11.TabIndex = 1;
             this.label11.Text = "Costo Total";
             // 
@@ -155,7 +158,7 @@ namespace Vista_PrototipoMenu
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(29, 33);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 17);
+            this.label12.Size = new System.Drawing.Size(81, 19);
             this.label12.TabIndex = 0;
             this.label12.Text = "Cantidad:";
             // 
@@ -170,7 +173,7 @@ namespace Vista_PrototipoMenu
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(31, 230);
+            this.groupBox2.Location = new System.Drawing.Point(31, 281);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,6 +189,7 @@ namespace Vista_PrototipoMenu
             this.txt_bodega.Name = "txt_bodega";
             this.txt_bodega.Size = new System.Drawing.Size(269, 23);
             this.txt_bodega.TabIndex = 7;
+            this.txt_bodega.Tag = "Alm_Ubicacion";
             // 
             // txt_almacen
             // 
@@ -194,6 +198,7 @@ namespace Vista_PrototipoMenu
             this.txt_almacen.Name = "txt_almacen";
             this.txt_almacen.Size = new System.Drawing.Size(269, 23);
             this.txt_almacen.TabIndex = 6;
+            this.txt_almacen.Tag = "Pk_AlmacenID";
             // 
             // txt_nombreProc
             // 
@@ -202,6 +207,7 @@ namespace Vista_PrototipoMenu
             this.txt_nombreProc.Name = "txt_nombreProc";
             this.txt_nombreProc.Size = new System.Drawing.Size(269, 23);
             this.txt_nombreProc.TabIndex = 5;
+            this.txt_nombreProc.Tag = "Prod_Nombre";
             // 
             // txt_idProc
             // 
@@ -210,6 +216,7 @@ namespace Vista_PrototipoMenu
             this.txt_idProc.Name = "txt_idProc";
             this.txt_idProc.Size = new System.Drawing.Size(269, 23);
             this.txt_idProc.TabIndex = 4;
+            this.txt_idProc.Tag = "Pk_ProductoID";
             // 
             // label8
             // 
@@ -264,7 +271,7 @@ namespace Vista_PrototipoMenu
             this.groupBox1.Controls.Add(this.txt_idDoc);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(31, 134);
+            this.groupBox1.Location = new System.Drawing.Point(31, 185);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -297,6 +304,7 @@ namespace Vista_PrototipoMenu
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(175, 23);
             this.txt_fecha.TabIndex = 13;
+            this.txt_fecha.Tag = "Doc_Fecha";
             // 
             // label4
             // 
@@ -315,6 +323,7 @@ namespace Vista_PrototipoMenu
             this.txt_nombreDoc.Name = "txt_nombreDoc";
             this.txt_nombreDoc.Size = new System.Drawing.Size(175, 23);
             this.txt_nombreDoc.TabIndex = 11;
+            this.txt_nombreDoc.Tag = "Doc_Numero";
             // 
             // label3
             // 
@@ -343,6 +352,7 @@ namespace Vista_PrototipoMenu
             this.txt_destino.Name = "txt_destino";
             this.txt_destino.Size = new System.Drawing.Size(289, 23);
             this.txt_destino.TabIndex = 8;
+            this.txt_destino.Tag = "Alm_Ubicacion";
             // 
             // label2
             // 
@@ -361,6 +371,7 @@ namespace Vista_PrototipoMenu
             this.txt_idDoc.Name = "txt_idDoc";
             this.txt_idDoc.Size = new System.Drawing.Size(289, 23);
             this.txt_idDoc.TabIndex = 6;
+            this.txt_idDoc.Tag = "Pk_DocumentoID";
             // 
             // label13
             // 
@@ -416,6 +427,18 @@ namespace Vista_PrototipoMenu
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Detalle de Traslados";
             // 
+            // dgv_traslaProd
+            // 
+            this.dgv_traslaProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_traslaProd.Location = new System.Drawing.Point(32, 30);
+            this.dgv_traslaProd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_traslaProd.Name = "dgv_traslaProd";
+            this.dgv_traslaProd.RowHeadersWidth = 51;
+            this.dgv_traslaProd.RowTemplate.Height = 24;
+            this.dgv_traslaProd.Size = new System.Drawing.Size(853, 304);
+            this.dgv_traslaProd.TabIndex = 0;
+            this.dgv_traslaProd.Tag = "tbl_productos";
+            // 
             // btn_remover
             // 
             this.btn_remover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -432,23 +455,22 @@ namespace Vista_PrototipoMenu
             this.btn_remover.UseVisualStyleBackColor = false;
             this.btn_remover.Click += new System.EventHandler(this.btn_remover_Click);
             // 
-            // dgv_traslaProd
+            // navegador1
             // 
-            this.dgv_traslaProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_traslaProd.Location = new System.Drawing.Point(32, 30);
-            this.dgv_traslaProd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_traslaProd.Name = "dgv_traslaProd";
-            this.dgv_traslaProd.RowHeadersWidth = 51;
-            this.dgv_traslaProd.RowTemplate.Height = 24;
-            this.dgv_traslaProd.Size = new System.Drawing.Size(853, 304);
-            this.dgv_traslaProd.TabIndex = 0;
+            this.navegador1.Location = new System.Drawing.Point(163, 6);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(765, 181);
+            this.navegador1.TabIndex = 20;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // TrasladoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
-            this.ClientSize = new System.Drawing.Size(1064, 900);
+            this.ClientSize = new System.Drawing.Size(1064, 872);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.lbl_precioTotal);
@@ -458,7 +480,7 @@ namespace Vista_PrototipoMenu
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Name = "TrasladoProductos";
-            this.Text = "TrasladoProductos";
+            this.Text = "4500 - TrasladoProductos";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -508,5 +530,6 @@ namespace Vista_PrototipoMenu
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgv_traslaProd;
         private System.Windows.Forms.Button btn_remover;
+        private NavegadorVista.Navegador navegador1;
     }
 }
