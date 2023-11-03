@@ -100,5 +100,11 @@ namespace Vista_PrototipoMenu
         {
             Help.ShowHelp(this, "umg.chm");            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TrasladoProductos h = new TrasladoProductos();
+            h.Show();
+        }
     }
 }
