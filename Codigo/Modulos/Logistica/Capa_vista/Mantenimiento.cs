@@ -14,6 +14,7 @@ namespace Vista_PrototipoMenu
 {
     public partial class Mantenimiento : Form
     {
+        Controlador cn = new Controlador();
         public Mantenimiento()
         {
             InitializeComponent();
@@ -22,14 +23,14 @@ namespace Vista_PrototipoMenu
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "4400";  //código aplicación asignado al formulario
+            NavegadorVista.Navegador.idApp = "4004";  //código aplicación asignado al formulario
             navegador1.actual = this;
             navegador1.tabla = Dgv_tablas;
-            TextBox[] Grupotextbox = { Txt_codigo, Txt_nombre, Txt_cuenta, Txt_fecha, Txt_almacen };
-            TextBox[] Idtextbox = { txt_IdCuenta};
+            TextBox[] Grupotextbox = { txt_IdCuenta, Txt_codigo, Txt_nombre, Txt_cuenta, Txt_fecha, Txt_almacen, Txt_tipo, Txt_estatus, Txt_relacion };
+            TextBox[] Idtextbox = { txt_IdCuenta, Txt_nombre };
             navegador1.textbox = Grupotextbox;
             navegador1.textboxi = Idtextbox;
-            //navegador1.cargar(Dgv_tablas, Grupotextbox, cn.getNombreBd());
+            navegador1.cargar(Dgv_tablas, Grupotextbox, cn.getNombreBd());
 
         }
 

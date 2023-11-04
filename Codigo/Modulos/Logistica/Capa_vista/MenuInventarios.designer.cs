@@ -381,6 +381,7 @@ namespace Vista_PrototipoMenu
             this.Name = "MenuInventarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Inventarios";
+            this.Load += new System.EventHandler(this.MenuInventarios_Load);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

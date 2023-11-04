@@ -138,5 +138,10 @@ namespace Vista_PrototipoMenu
             form.Show();
             hideSubMenu();
         }
+
+        private void MenuInventarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,8 +37,7 @@
     <Reference Include="FontAwesome.Sharp">
       <HintPath>C:\Program Files\UMG\Instalador General HSC\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Seguridad_Controlador">
       <HintPath>C:\Program Files\UMG\Instalador General HSC\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -71,8 +70,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Nominas\Capa_vista\bin\Debug\Vista_NominasMenu.dll</HintPath>
     </Reference>
-    <Reference Include="Vista_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Vista_Seguridad">
       <HintPath>C:\Program Files\UMG\Instalador General HSC\Vista_Seguridad.dll</HintPath>
     </Reference>
     <Reference Include="Vista_VentasCxcMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

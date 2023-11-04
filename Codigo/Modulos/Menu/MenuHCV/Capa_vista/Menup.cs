@@ -117,6 +117,11 @@ namespace MenuHCV
             //form.Show();
             //cn.setBtitacora("8000", "Ingreso Prototipo");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
         //Método que ingresa un valor a la bitacora de acuerdo el módulo
 
     }
